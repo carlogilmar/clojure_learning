@@ -1,25 +1,18 @@
-;(defn fizzbuzz [i]
-;  (cond
-;    (= 0 (mod i (* 3 5)) "FizzBuzz"
-;    (= 0 (mod i 5)) "Fizz"
-;    (= 0 (mod i 3)) "Buzz"
-;    :else (str i))))
-
 (defn fizzbuzz
+  ;FizzBuzz
   ([index]
-  (cond
-    (= 0 (mod index (* 3 5))) (println "FizzBuzz")
-    (= 0 (mod index 5)) (println "Fizz")
-    (= 0 (mod index 3)) (println "Buzz")
-    :else (println index)
-    ))
+   (println "Starting...")
+   (cond
+     (= 0 (mod index (* 3 5))) (println "FizzBuzz")
+     (= 0 (mod index 5)) (println "Fizz")
+     (= 0 (mod index 3)) (println "Buzz")
+     :else (println index)
+     ))
+  ; Iterator
   ([start end]
-    (println "Hola mundo")
+   (map fizzbuzz (range start end))
    )
-  )
+)
 
 (fizzbuzz 15)
-(fizzbuzz 5)
-(fizzbuzz 3)
-(fizzbuzz 3)
-(fizzbuzz 3 4)
+(fizzbuzz 1 15)
