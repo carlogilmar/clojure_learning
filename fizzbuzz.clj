@@ -22,3 +22,4 @@
 (fizzbuzz 5)
 (fizzbuzz 3)
 (fizzbuzz 3)
+(fizzbuzz 3 4)
