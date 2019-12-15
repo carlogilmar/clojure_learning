@@ -13,6 +13,9 @@
     (= 0 (mod index 3)) (println "Buzz")
     :else (println index)
     ))
+  ([start end]
+    (println "Hola mundo")
+   )
   )
 
 (fizzbuzz 15)
