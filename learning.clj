@@ -20,6 +20,8 @@
 ;
 ;(workhorse {:a "holi"})
 
+
+;;; ======= https://purelyfunctional.tv/guide/clojure-collections/
 ;; Store an empty vector in atom
 (def todos (atom [])) ;; use a vector
 
