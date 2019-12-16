@@ -19,3 +19,19 @@
 ;  )
 ;
 ;(workhorse {:a "holi"})
+
+;; Store an empty vector in atom
+(def todos (atom [])) ;; use a vector
+
+;; Update the value of the atom
+(defn add-todo! [item]
+    (swap! todos conj item))
+
+;; Adding items
+(add-todo! "Buy kitten")
+(add-todo! "Buy cat food")
+(add-todo! "Feed kitten")
+
+;; doseq is a for
+(doseq [item @todos]
+    (prn item))
