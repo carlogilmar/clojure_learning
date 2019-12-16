@@ -6,3 +6,9 @@
      )
   )
 
+(defn announce-treasure-location
+      [{lat :lat lng :lng}]
+       (println (str "Treasure lat: " lat))
+       (println (str "Treasure lng: " lng)))
+
+
