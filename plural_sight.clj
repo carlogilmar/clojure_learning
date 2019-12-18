@@ -58,3 +58,31 @@
 
 ;; Sets
 #{1 2 3}
+
+;; Deconstructing
+(let
+  [[a b c] [1 2 3 4 5 6 7 8 9]]
+  (println (* a b c)))
+
+;; Ignoring values
+(let [[_ & others] [1 2 3 4 5 6]] (println others))
+
+(let [ [name] ["carlo" "gilmar" "padilla" "santana"]] (print name)) ; -> "carlo"
+
+(let [ [_ name] ["carlo" "gilmar" "padilla" "santana"]] (print name)) ; -> "gilmar"
+
+(let [ [_ _ _ name] ["carlo" "gilmar" "padilla" "santana"]] (print name)) ; -> "santana"
+
+(let [ [_ & rest] ["carlo" "gilmar" "padilla" "santana"]] (print rest)) ; -> (gilmar padilla santana)
+
+
+;; Maps
+(def me {:name "carlo" :username "carlogilmar"})
+(let [{:name name, :username username} me] [name username])
+
+(let [{:keys [name username]} me] [name username])
+
+
+
+
+
