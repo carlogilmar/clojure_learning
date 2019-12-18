@@ -3,5 +3,4 @@
 (def printer (fn [msg] (print msg)))
 
 (defn main
-  ([] (printer "saludos")
-  )
+  ([] (printer "saludos")))
