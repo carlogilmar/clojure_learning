@@ -40,5 +40,21 @@
 (def fun #(* %1 2))
 (fun 1)
 
+;; ======== Data Structures
 
+[1 2 3 4] ; This is a vector
+'[1 2 3 (+ 1 2)] ; This is a vector before evaluation funtions inside
 
+'(1 2 3 4) ; This is a list
+
+; Maps
+(def my_map {:a 1 :b 2})
+(assoc my_map :c 3) ; This'll build a new data structure
+(my_map :a) ; -> 1
+
+(def user {:name "Carlo", :username "carlogilmar" :address {:zip 10000}})
+(get-in user [:address :zip]) ; -> 10000
+(assoc-in user [:address :zip] 12500) ; -> This'll generate a new map
+
+;; Sets
+#{1 2 3}
