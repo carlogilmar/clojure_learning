@@ -82,7 +82,24 @@
 
 (let [{:keys [name username]} me] [name username])
 
+;;  Fibonnaci Sequence Exercise 🤯
 
+(iterate (fn [[a b]] [b (+ a b)]) [0 1])
+;; => ([0 1] [1 1] [1 2] [2 3] [3 5] [5 8] [8 13] [13 21] [21 34] [34 55] ...)
 
+;; Map is the Enum.each of Clojure
+(map first (iterate (fn [[a b]] [b (+ a b)]) [0 1]))
+;; => (0 1 1 2 3 5 8 13 21 34 ...)
+
+;; Assigning
+(def fibs (map first (iterate (fn [[a b]] [b (+ a b)]) [0 1])))
+;;user=> fibs
+;;(0 1 1 2 3 5 8 13 21 34 ...)
+(take 5 fibs)
+;; => (0 1 1 2 3)
+(drop 5 fibs)
+;; => (5 8 13 21 34 55 89 144 233 377 ...)
+;; user=> fibs
+;; (0 1 1 2 3 5 8 13 21 34 ...)
 
 
