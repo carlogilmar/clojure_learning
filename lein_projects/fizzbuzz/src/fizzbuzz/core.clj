@@ -1,7 +1,7 @@
-(ns fizzbuzz.core
-  (:gen-class))
+(ns fizzbuzz.core)
 
-(defn -main
-  "I don't do a whole lot ... yet."
-  [& args]
-  (println "Hello, World!"))
+(defn fizzbuzz
+  "Este es mi primer ejericio de verdad en clojure perros!!!"
+  ([e] e)
+  )
+
